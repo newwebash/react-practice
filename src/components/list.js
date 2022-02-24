@@ -4,22 +4,18 @@ class UsersList extends Component {
   render() {
     return (
       <div>
-      <p>{this.props.users[1].userName}</p>
-<p>{this.props.movies[1].name}</p>
     	<ul>
       		{
             	this.props.profiles.map((profile) => (
       				<li key={profile.id}>
-						<p>Username: {this.props.users[profile.userID].userName}</p>
-						<p>Favorite movie: {this.props.movies[profile.favoriteMovieID].name}</p>
-						{profile.favoriteMovieID}
+						<p>{this.props.users[profile.userID].name}'s favorite movie is {this.props.movies[profile.favoriteMovieID].name}</p>
       				</li>
     			))
             }
       	</ul>
-</div>
+	</div>
     )
-	}
+  }
 }
 
 export default UsersList
